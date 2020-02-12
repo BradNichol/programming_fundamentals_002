@@ -27,7 +27,7 @@ function countBooks() {
   // can use return catalogue.length but in the spirit of the lesson, used a for loop.
   i = 0;
   for (i = 0; i < catalogue.length; i++){
-    i++
+    i++;
   }
   return i;
 };
@@ -45,7 +45,7 @@ function countBooksByFirstLetter(letter) {
   let j = 0;
   for (let i = 0; i < catalogue.length; i++){
     if (catalogue[i].startsWith(letter)){
-      j++
+      j++;
     };
   };
   return j;
@@ -65,9 +65,9 @@ function getBooksByAuthor(author) {
   let authorList = []
   for (let i = 0; i < catalogue.length; i++) {
     if (catalogue[i].includes(author)) {
-      authorList.push(catalogue[i])
+      authorList.push(catalogue[i]);
       
-    }
+    };
   };
   return authorList;
 };
