@@ -42,11 +42,24 @@ describe("catalogueService.countBooksByKeyword", () => {
 });
 
 describe("catalogueService.getBooksByAuthor", () => {
-  test("returns the number of books that contain a keyword. Assassin should return 3.", () => {
+  test("returns an array of books by provided author.", () => {
     expect(catalogueService.getBooksByAuthor("Charles Dickens")).toEqual([
       "A Tale of Two Cities by Charles Dickens",
       "Oliver Twist by Charles Dickens",
       "Great Expectations by Charles Dickens"
+    ]);
+  });
+
+  test("return empty array if not books by author (Brad).", () => {
+    expect(catalogueService.getBooksByAuthor("Brad")).toEqual([]);
+  });
+
+  test("returns the array of all books with author name Charles", () => {
+    expect(catalogueService.getBooksByAuthor("Charles")).toEqual([
+      "A Tale of Two Cities by Charles Dickens",
+      "Oliver Twist by Charles Dickens",
+      "Great Expectations by Charles Dickens",
+      "The Origin of Species by Charles Darwin"
     ]);
   });
 });
