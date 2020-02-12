@@ -23,6 +23,8 @@ const catalogue = [
 ];
 
 function countBooks() {
+
+  // can use return catalogue.length but in the spirit of the lesson, used a for loop.
   i = 0;
   for (i = 0; i < catalogue.length; i++){
     i++
